@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Room</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
+    <script src="playpauseAudio"></script>
+    <script src="exitRooms"></script>
+  
+  </head>
+
+  <body>
+    <a-scene>
+        <!-- Asset Management System -->
+        <a-assets>
+          
+          <audio id="drums_audio" src="audios/Drums.mp3"></audio>
+          <audio id="piano_audio" src="audios/Piano.mp3"></audio>
+          <audio id="saxophone_audio" src="audios/Saxophone.mp3"></audio>
+          <audio id="bass_audio" src="audios/Bass.mp3"></audio>
+          <audio id="gramophone_audio" src="audios/Gramophone.mp3"></audio>
+          
+          
+          <a-asset-item id="room" src="assets/CubeRoom.gltf"></a-asset-item> 
+          <a-asset-item id="piano" src="assets/Piano.obj"></a-asset-item> 
+          <a-asset-item id="piano-m" src="assets/Piano.mtl"></a-asset-item>
+          
+          <a-asset-item id="bass" src="assets/BassBase.obj"></a-asset-item> 
+          <a-asset-item id="bass-m" src="assets/BassBase.mtl"></a-asset-item> 
+          
+          <a-asset-item id="saxophone" src="assets/Saxophone.obj"></a-asset-item> 
+          <a-asset-item id="saxophone-m" src="assets/Saxophone.mtl"></a-asset-item> 
+          
+          <a-asset-item id="stool" src="assets/stool.obj"></a-asset-item> 
+          <a-asset-item id="stool-m" src="assets/stool.mtl"></a-asset-item> 
+          
+          <a-asset-item id="drums" src="assets/DrumKit.obj"></a-asset-item> 
+          <a-asset-item id="drums-m" src="assets/DrumKit.mtl"></a-asset-item>
+          
+          <a-asset-item id="gramophone" src="assets/Gramophone.obj"></a-asset-item>
+          <a-asset-item id="gramophone-m" src="assets/Gramophone.mtl"></a-asset-item>
+          
+          <a-asset-item id="table" src="assets/table.obj"></a-asset-item> 
+          <a-asset-item id="table-m" src="assets/table.mtl"></a-asset-item>
+          <a-asset-item id="mix" src="assets/MixAudio.obj"></a-asset-item> 
+          <a-asset-item id="mix-m" src="assets/MixAudio.mtl"></a-asset-item> 
+          
+          <a-asset-item id="amp" src="assets/Guitar Amp.obj"></a-asset-item> 
+          <a-asset-item id="amp-m" src="assets/Guitar Amp.mtl"></a-asset-item> 
+          <a-asset-item id="amp-p" src="assets/Guitar Amp Texture.png"></a-asset-item> 
+
+          <a-asset-item id="computer" src="assets/Computer.obj"></a-asset-item> 
+          <a-asset-item id="computer-m" src="assets/Computer.mtl"></a-asset-item> 
+<!--
+          <a-asset-item id="desk" src="assets/Desk.obj"></a-asset-item> 
+          <a-asset-item id="desk-m" src="assets/Desk.mtl"></a-asset-item> 
+      -->
+        </a-assets>
+        
+        <a-entity position="0 0 0">
+          <a-camera>
+            <a-cursor>
+            </a-cursor>
+          </a-camera>
+        </a-entity>
+
+        <!-- Cinema model -->
+        <a-entity gltf-model="#room" position="-0.4 -4.897 -4.297" scale="5 5 5" ></a-entity>
+       
+        <a-entity obj-model="obj: #piano; mtl: #piano-m" position="17.054 -0.401 -20.47" rotation="0 270 0" scale="3.0 3.0 3.0" piano_play_pause></a-entity>
+        <a-entity obj-model="obj: #stool; mtl: #stool-m" position="16.932 -2.882 -16.56" rotation="0 0 0" scale="1 1 1" ></a-entity>
+        
+         <a-entity obj-model="obj: #drums; mtl: #drums-m" position="0 -1.941 -18.57" rotation="0 0 0" scale="8 8 8" drums_play_pause></a-entity>
+      
+        <a-entity obj-model="obj: #computer; mtl: #computer-m" position="22.677 3.124 -10.014" rotation="0 270 0" scale="0.007 0.008 0.007" ></a-entity>
+         
+         <a-entity obj-model="obj: #table; mtl: #table-m" position="-21.82068 0.194 -19.59093" rotation="0 270 0" scale="2 3 2"></a-entity>
+         <a-entity obj-model="obj: #mix; mtl: #mix-m"position="-22.47059 1.408 -19.78913" rotation="0 270 0" scale="1.4 1.3 2"></a-entity>
+        <a-entity obj-model="obj: #amp; mtl: #amp-m" position="-12.13769 -3.355 -26.29" rotation="" scale="0.01 0.01 0.01"></a-entity>
+        
+        <a-entity obj-model="obj: #gramophone; mtl: #gramophone-m" position="6.604 3.625 -27.48" rotation="0 90 0" scale="3.7 3.7 3.7" gramophone_play_pause></a-entity>
+        
+        <a-entity obj-model="obj: #saxophone; mtl: #saxophone-m" position="-22.88967 4.75083 14.14105" rotation="14.999999999999998 90 0" scale="5 5 5" saxophone_play_pause></a-entity>
+        
+         <a-entity obj-model="obj: #bass; mtl: #bass-m" position="-23.21015 0.28165 2.18318" rotation="-10 90 0" scale="1.2 1.2 1.2" bass_play_pause></a-entity>
+
+        <a-box scale="7 13 0.2" position="-1.45951 1.72483 19.64395" exit_room>
+          <a-text value="EXIT" color="red" rotation="0 180 0" position="0.22552 0.63253 4.98092" text=""></a-text>
+        </a-box>
+        
+        
+        
+        <!-- Sun and Sky model -->
+        <a-simple-sun-sky sun-position="0.5 0.5 1"></a-simple-sun-sky>
+        <a-entity light="type: ambient; color: #BBB"></a-entity>
+        <a-entity id="directional" light="type: directional; color: #FFF; intensity: 1.3" position="0.5 1 2"></a-entity> 
+        <a-entity id="directional" light="type: directional; color: #FFF; intensity: 1.3" position="-0.5 1 -2"></a-entity> 
+
+       
+                            
+  
+    
+
+    </a-scene>
+
+  </body>
+</html>

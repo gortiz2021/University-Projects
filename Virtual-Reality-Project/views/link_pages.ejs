@@ -1,0 +1,32 @@
+AFRAME.registerComponent('enter_music_room', {   <!-- Registering a component called 'enter_music_room' -->
+        init: function() {
+          this.el.addEventListener('click', function(){
+                                   location.href = "/Music";
+                                   });
+            }
+        });
+
+        AFRAME.registerComponent('enter_movie_room', {   <!-- Registering a component called 'enter_music_room' -->
+        init: function() {
+          this.el.addEventListener('click', function(){
+                                   location.href = "/Cinema";
+                                   });
+            }
+        });
+
+        AFRAME.registerComponent('enter_info_center', {   <!-- Registering a component called 'enter_music_room' -->
+        init: function() {
+          this.el.addEventListener('click', function(){
+                                   location.href = "/Info";
+                                   });
+            }
+        });
+
+
+        AFRAME.registerComponent('enter_carnival_game', {   <!-- Registering a component called 'enter_music_room' -->
+        init: function() {
+          this.el.addEventListener('click', function(){
+                                   location.href = "/Carnival";
+                                   });
+            }
+        });

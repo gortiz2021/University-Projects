@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/0.7.1/aframe.min.js"></script> 
+        <!-- Adds physics -->
+        <script src="https://codechangers.com/physics.js"></script> 
+        <!-- Environment -->
+        <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+    </head>
+    <body>
+        <a-scene id= "myScene">
+            <a-entity environment="preset:tron;"></a-entity>
+            <a-camera id="myCamera" position="0 1 0">
+                <a-cursor intersection-spawn="Event: click; mixin:voxel;"></a-cursor>
+            </a-camera>
+            <!-- Adds rows w/spheres -->
+            <a-entity class="shooter-box">
+                <a-box static-body position="0 0.5 -7" width="9" rotation="0 0 0" color="#4CC3D9"></a-box>
+                <a-sphere dynamic-body radius = "0.5" position="0 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="-2 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="-4 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="2 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="4 1.5 -7" color= "red"> </a-sphere>
+                </a-entity>
+                 <a-entity class="shooter-box" position="-10 0 0" rotation="0 45 0">
+                <a-box static-body position="0 0.5 -7" width="9" rotation="0 0 0" color="#4CC3D9"></a-box>
+                <a-sphere dynamic-body radius = "0.5" position="0 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="-2 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="-4 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="2 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="4 1.5 -7" color= "red"> </a-sphere>
+                </a-entity>
+                 <a-entity class="shooter-box"  position="10 0 0" rotation="0 -45 0">
+                <a-box static-body position="0 0.5 -7" width="9" rotation="0 0 0" color="#4CC3D9"></a-box>
+                <a-sphere dynamic-body radius = "0.5" position="0 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="-2 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="-4 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="2 1.5 -7" color= "red"> </a-sphere>
+                <a-sphere dynamic-body radius = "0.5" position="4 1.5 -7" color= "red"> </a-sphere>
+                </a-entity>
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+    </body> 
+    <!-- Adds shooting mechanics -->
+    <script src="https://codechangers.com/shoot-full.js"></script>
+</html>
+<!-- test 
+--!>

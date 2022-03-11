@@ -1,0 +1,69 @@
+AFRAME.registerComponent('drums_play_pause', {   <!-- Registering a component called 'drums_play_pause' -->
+        init: function() {
+          var test_drums = document.querySelector ('#drums_audio');
+          this.el.addEventListener('click', function(){
+                                   if (test_drums.paused){      <!-- If drums are paused -->
+                                          test_drums.play();    <!-- On clicking the drums will be played -->
+                                        }
+                                   else { <!-- If drums are being played -->
+                                    test_drums.pause();  <!-- After clicking it will pause the drums -->
+                                  }
+                                   });
+        }
+});
+
+AFRAME.registerComponent('piano_play_pause', {   <!-- Registering a component called 'piano_play_pause' -->
+        init: function() {
+          var test_piano = document.querySelector ('#piano_audio');
+          this.el.addEventListener('click', function(){
+                                   if (test_piano.paused){      <!-- If piano are paused -->
+                                          test_piano.play();    <!-- On clicking the piano will be played -->
+                                        }
+                                   else { <!-- If piano is being played -->
+                                    test_piano.pause();  <!-- After clicking it will pause the piano -->
+                                  }
+                                   });
+        }
+});
+
+AFRAME.registerComponent('gramophone_play_pause', {   <!-- Registering a component called 'piano_play_pause' -->
+        init: function() {
+          var test_gramophone = document.querySelector ('#gramophone_audio');
+          this.el.addEventListener('click', function(){
+                                   if (test_gramophone.paused){      <!-- If piano are paused -->
+                                          test_gramophone.play();    <!-- On clicking the piano will be played -->
+                                        }
+                                   else { <!-- If piano is being played -->
+                                    test_gramophone.pause();  <!-- After clicking it will pause the piano -->
+                                  }
+                                   });
+        }
+});
+
+AFRAME.registerComponent('bass_play_pause', {   <!-- Registering a component called 'piano_play_pause' -->
+        init: function() {
+          var test_bass = document.querySelector ('#bass_audio');
+          this.el.addEventListener('click', function(){
+                                   if (test_bass.paused){      <!-- If piano are paused -->
+                                          test_bass.play();    <!-- On clicking the piano will be played -->
+                                        }
+                                   else { <!-- If piano is being played -->
+                                    test_bass.pause();  <!-- After clicking it will pause the piano -->
+                                  }
+                                   });
+        }
+});
+
+AFRAME.registerComponent('saxophone_play_pause', {   <!-- Registering a component called 'piano_play_pause' -->
+        init: function() {
+          var test_saxophone = document.querySelector ('#saxophone_audio');
+          this.el.addEventListener('click', function(){
+                                   if (test_saxophone.paused){      <!-- If piano are paused -->
+                                          test_saxophone.play();    <!-- On clicking the piano will be played -->
+                                        }
+                                   else { <!-- If piano is being played -->
+                                    test_saxophone.pause();  <!-- After clicking it will pause the piano -->
+                                  }
+                                   });
+        }
+});

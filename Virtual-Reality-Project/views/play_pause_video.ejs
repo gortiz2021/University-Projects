@@ -1,0 +1,18 @@
+<!-- Writing Script to support the play and pause controls of the video component -->  
+
+AFRAME.registerComponent('video_play_pause', {   <!-- Registering a component called 'video_play_pause' -->
+        init: function() {
+          var test_video = document.querySelector ('#My_Video');
+          var video_control_buttons = document.querySelector ('#video_control_buttons');
+          this.el.addEventListener('click', function(){
+                                   if (test_video.paused){      <!-- If video is paused -->
+                                          test_video.play();    <!-- On clicking the video will be played -->
+                                          video_control_buttons.setAttribute('src', '#pause_button');  <!-- After play button clicked it will display the pause button -->
+                                        }
+                                   else { <!-- If video is being played -->
+                                    test_video.pause();  <!-- After clicking it will pause the video -->
+                                    video_control_buttons.setAttribute('src', '#play_button');  <!-- Now play button will be dispalyed -->
+                                  }
+                                   });
+        }
+});

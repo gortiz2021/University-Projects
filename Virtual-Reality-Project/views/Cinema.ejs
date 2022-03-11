@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movie Room</title>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-simple-sun-sky@^1.2.2/simple-sun-sky.js"></script>
+    <script src="playpauseVideo"></script>
+    <script src="exitRooms"></script>
+  </head>
+
+  <body>
+    <a-scene>
+        <!-- Asset Management System -->
+        <a-assets>
+          <a-asset-item id="cinema" src="assets/Cinema_1258.gltf"></a-asset-item>  
+          <a-asset-item id="tv" src="assets/TV.obj"></a-asset-item>  
+          <a-asset-item id="tv-m" src="assets/TV.mtl"></a-asset-item> 
+          <video id = "My_Video"  src = "https://cdn.glitch.com/655c4929-933c-40c7-8599-a757ea3360fb%2Fstar_wars_opening_scene.mp4?v=1619414800857"></video>
+          <img crossorigin = "anonymous" id = "play_button" src = "https://cdn.glitch.com/655c4929-933c-40c7-8599-a757ea3360fb%2Ficons8-play-96.png?v=1619561930769">
+          <img crossorigin = "anonymous" id = "pause_button" src = "https://cdn.glitch.com/655c4929-933c-40c7-8599-a757ea3360fb%2Ficons8-pause-100.png?v=1619560199912"> 
+         </a-assets>
+
+        <!-- Cinema model -->
+        <a-entity gltf-model="#cinema" position="0 -15 -7" rotation="0 90 0" ></a-entity>
+        
+        <!-- Putting the TV model inside the cinema -->
+        <a-entity position="9.616 2.54 -66.55" scale="22.5 11 1" obj-model="obj : #tv; mtl: #tv-m"></a-entity>
+        
+        <!-- Sun and Sky model -->
+        <a-simple-sun-sky sun-position="0.5 0.5 1"></a-simple-sun-sky>
+        <a-entity light="type: ambient; color: #BBB"></a-entity>
+        <a-entity id="directional" light="type: directional; color: #FFF; intensity: 1.3" position="0.5 1 2"></a-entity> 
+        <a-entity id="directional" light="type: directional; color: #FFF; intensity: 1.3" position="-0.5 1 -2"></a-entity> 
+        
+        
+        <!-- Cursor Primitive for user interaction -->
+      <a-camera>
+        <a-entity cursor position = "0 0 -1"
+                  geometry = "primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                  material = "color: red; shader: flat; opacity: 0.5">
+        </a-entity>
+      </a-camera>
+      
+      
+      <!-- Video Component -->
+      <a-video src="#My_Video"  width="6" height="2" position="-0.036 6.595 -65.72" scale="14.6 12.2 1">
+        <!--Play/Pause button for the video -->
+        <a-image id = "video_control_buttons" src = "#play_button" position = "0 -1.20 0.10" scale = "0.2 0.2 1" video_play_pause ></a-image>
+      </a-video>
+       
+      <a-box id="exit" width="0.5" height="0.2" position="-58.9485 -2.34015 -42.60152" scale="43 105 0.2" rotation="0 90 0" exit_room>
+  
+    
+
+    </a-box>
+    
+
+    </a-scene>
+
+  </body>
+</html>
