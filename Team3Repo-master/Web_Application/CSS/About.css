@@ -1,0 +1,74 @@
+#TOP {
+  background:url('../Pictures/FresnoStateTowerSign.png');
+  min-height: 100vh; 
+  max-height: 100vh; 
+
+  /* Create the parallax scrolling effect */
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ 
+
+.center-block{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.TEXT_TIMES{
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.text-responsive {
+  font-size: calc(50% + 3vw + 3vh);
+  font-weight: bold;
+}
+
+.text-responsive2 {
+  font-size: calc(50% + 2vw + 2vh);
+  font-weight: bold;
+}
+
+/*FOOTER CSS*/
+.copyright-area{
+  
+  padding: 25px 0;
+
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ca0f3e;
+}
+.footer-menu li a {
+  font-size: 14px;
+}
+
+
+
+/* used in nav bar*/
+
+#NavHoverColor:hover{
+  color: #ca0f3e;
+}
+
+#SignUpLogIn{
+  color: white;
+}
+
+#SignUpLogIn:hover{
+  color: #00ff00;
+}
+
+

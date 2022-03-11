@@ -1,0 +1,125 @@
++<!doctype html>
+<html>
+	<head>
+		<title>FSU-PWS</title>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, =4">
+	    <style>
+			* {
+			  box-sizing: border-box;
+			  }
+
+			body {
+			  margin: 0;
+			  font-family: Arial;
+			  font-size: 17px;
+			}
+
+			#myVideo {
+			  position: fixed;
+			  right: 0;
+			  bottom: 0;
+			  min-width: 100%; 
+			  min-height: 100%;
+			}
+
+			.content {
+			  position: fixed;
+			  background: rgba(0, 0, 0, 0.40);
+			  color: #f1f1f1;
+			  width: 100%;
+			  padding: 20px;
+			  text-align: center;
+			  
+
+			  top: 50%;
+  			  transform: translateY(-50%);
+			}
+
+
+			.content h1 {
+				text-align: center;
+				font-size: 52px;
+				font-weight: bold;
+				-webkit-text-stroke: 2px black;
+				text-shadow: 1px black;
+			}
+
+			.content h2 {
+				text-align: center;
+				font-size: 30px;
+				-webkit-text-stroke: 1.5px black;
+				text-shadow: 0.5px black;
+			}
+
+			#myBtn {
+			  width: 200px;
+			  font-size: 18px;
+			  padding: 10px;
+			  border: 2px solid white;
+			  background: #00235D;
+			  color: #fff;
+			  cursor: pointer;
+			  text-align: center;
+			  transition: all 0.5s;
+			}
+
+			#myBtn span{
+				cursor: pointer;
+  				display: inline-block;
+  				position: relative;
+  				transition: 0.5s;
+			}
+
+			#myBtn span:after{
+				content: '\00bb';
+	  			position: absolute;
+	  			opacity: 0;
+	  			top: 0;
+	  			right: -20px;
+	  			transition: 0.5s;
+			}
+
+			#myBtn:hover span{
+			  padding-right: 25px;
+			}
+
+			#myBtn:hover span:after{
+			  opacity: 1;
+  			right: 0;
+			}
+
+			#myBtn:active{
+				background: #CC0033;
+			}
+
+
+		</style>
+	</head>
+
+	<body>
+		<video autoplay muted loop id="myVideo">
+		  <source src="HMLVideo.mov" type="video/mp4">
+		   Your browser does not support HTML5 video.
+		</video>	
+
+		<div class="content">
+		  <h1>Welcome to FSU Pathwalking System!</h1>
+		  <h2>Having Difficulty Finding a Location on Campus? <br> Don't Worry, We Are Here to Help!</h2>
+
+		  <button id="myBtn" ><span>Find My Route</span></button> <br><br>
+		  <img height = "60" width ="60" src = "../Pictures/FresnoStateSeal.png" style = "margin-right:20px;">
+		  <img height = "60" width ="80" src = "../Pictures/FSUBulldogLogo.png">
+		  <img height = "60" width ="60" src = "../Pictures/TheCSUwithColor.png" style = "margin-left:20px;">
+		</div>
+
+			<script>
+					
+					document.getElementById("myBtn").onclick = function () {
+	    			    location.href = "Navigation.php"; // used to go to main page
+	    			};
+					
+			</script>
+	</body>
+	</html>

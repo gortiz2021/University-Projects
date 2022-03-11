@@ -1,0 +1,105 @@
+#TOP {
+  background:url('../Pictures/FresnoStateTowerSign.png');
+  min-height: 100vh; 
+
+  /* Create the parallax scrolling effect */
+  
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* change min height to make suitable for all building divs to look even*/
+
+
+.HenryMBackground{
+  background-image:url('../Pictures/HenryMaddenOutside.jpg');
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+
+.LinkUL{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.text-responsive {
+  font-size: calc(50% + 0.5vw + 0.5vh);
+  font-weight: bold;
+}
+
+.text-responsive2 {
+  font-size: calc(50% + 1vw + 1vh);
+  font-weight: bold;
+  font-family: italic;
+  font-style: italic;
+}
+
+.text-responsive3 {
+  font-size: calc(25% + 0.5vw + 0.5vh);
+  font-weight: 500;
+}
+
+.text-responsive4 {
+  font-size: calc(20% + 1vw + 1vh);
+  font-weight: bold;
+  font-family: italic;
+  font-style: italic;
+}
+
+.text-responsiveFLOORS {
+  font-size: calc(1% + 1vw + 1vh);
+  font-weight: bold;
+  font-style: italic;
+}
+
+/*FOOTER CSS*/
+.copyright-area{
+  
+  padding: 25px 0;
+
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #CC0033;
+}
+.footer-menu li a {
+  font-size: 14px;
+}
+
+.FLOORS_UL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.HRbold{
+  border-top:1px solid black;
+}
+
+/* used in nav bar*/
+#NavHoverColor:hover{
+  color: #CC0033;
+}
+#SignUpLogIn{
+  color: white;
+}
+#SignUpLogIn:hover {
+  color: #00ff00;
+}
